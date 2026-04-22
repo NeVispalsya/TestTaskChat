@@ -24,7 +24,7 @@ public class ChatController {
     }
 
     @PostMapping("/by-user")
-    public List<Chat> getAllChats(@RequestBody GetAllChatRequest getAllChatRequest){
+    public List<Chat> getAllChatsByUserId(@RequestBody GetAllChatRequest getAllChatRequest){
         return chatService.getAllChatByUser(getAllChatRequest.userId());
     }
 }
